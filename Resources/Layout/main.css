@@ -1,0 +1,669 @@
+/** 
+ * File: main.css
+ * Author: Hannes Lüer 
+ * Description: CSS-Datei die den Style der gesamten Website festlegt
+*/
+
+/* Allgemein */
+html, body {
+    height: 100%;    
+}
+
+body {
+    background-color: #404040;
+    color: #cdd2df;
+    font-family: Calibri, "Segoe UI", Optima, Arial, sans-serif;
+    margin: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    border-width: 2px;
+}
+
+table.ui {
+    width: 100%;
+    border: 0px;
+    color: #1b1b1b;    
+    border: 2px solid #787c7c;     
+}
+
+table.ui td, table.ui th{
+    border: 1px solid #adadad; 
+    padding: 3px;
+}
+
+table.ui thead{
+    border-bottom: 2px solid #787c7c;
+    background-color: #3c5d79; /* Zeilenfarbe */    
+    color: #F2F2F2;
+    font-size: large;
+}
+
+table.ui tbody{
+    background-color: #D6DCE5; /* Zeilenfarbe */
+}
+
+table.ui tr:nth-child(2n){ 
+    background-color: #cdd2df; /* Zeilenfarbe */
+}
+
+input[type="radio"]{
+    margin-left: 0px;
+}
+
+a {
+    color: #4688c7;
+}
+
+div h1, h2 {
+    margin-top: 0px;
+}
+
+button {   
+    border: 0px;
+    border-radius: 0px;
+    background-color: #33546F;
+    color: #F2F2F2;    
+    font-family: Calibri, "Segoe UI", Optima, Arial, sans-serif;
+    width: 100%;
+}
+
+button.ui:hover{    
+    background-color: rgb(37, 37, 37) !important;  
+    color: #F2F2F2;    
+}
+
+hr{
+    border: none;
+    border-top: dotted 4px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+/*Navbar*/
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2D3237; /*Hintergrund der Navbar*/
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+li.navbar {
+    display: inline;
+    float: left;
+}
+
+li.rechts {
+    float: right !important;
+}
+a.navbar, label.navbar {
+    display: block;
+    color: #F2F2F2;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 22px;
+}
+
+a.navbar:hover{
+    background-color: rgb(37, 37, 37);
+}
+
+img.navbar {
+    width: 40px;
+    margin-top: 8px;
+}
+
+
+/*Login*/
+div.login {
+    background-color: #2D3237;
+    min-width: 450px;
+    width: 33%;
+    margin-top: 150px;
+    margin-left: auto ;
+    margin-right: auto ;
+    padding: 40px;
+}
+
+@media (max-width: 600px) {
+    div.login {
+        width: calc(100% - 40px);
+        padding: 20px;
+    }
+}
+
+img.login {
+
+    display: block;
+    margin-top: -125px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: visible;
+}
+
+h1.login { 
+    color:#F2F2F2;
+    font-weight: 100;
+    text-align: center;
+    font-size: 3em;
+    margin: 0px;
+    padding: 20px 5px 0px 5px;
+} 
+
+input.login {
+    display: block;
+    margin: 30px 0px 30px 0px;
+    padding: 0px 0px 0px 6px;
+    border: 0px;
+    border-radius: 0px;
+    width: calc(100% - 6px);
+    height: 1cm;
+    font-size: 1.4em;
+    background-color: #7F7F7F;
+    color: #F2F2F2;    
+    font-family: Calibri, "Segoe UI", Optima, Arial, sans-serif;
+}
+input.hidden {
+    display: none;
+}
+
+input.login::placeholder{
+    color: #F2F2F2;    
+}
+
+button.login {
+    margin: 0px 0px 30px 0px;
+    padding: 0px;
+    border: 0px;
+    border-radius: 0px;
+    height: 1cm;
+    background-color: #33546F;
+    color: #F2F2F2;    
+    font-family: Calibri, "Segoe UI", Optima, Arial, sans-serif;    
+    font-size: 1.4em;
+    width: 100%;
+}
+
+button.login:hover{    
+    background-color: rgb(37, 37, 37) !important;  
+    color: #F2F2F2;    
+}
+
+button.login#button1 { /*erster Button*/
+    margin-right: 10px;
+    width: calc(50% - 10px);    
+    background-color: #48779E; 
+}
+
+button.login#button2 { /*zweiter Button*/
+    margin-left: 10px;
+    width: calc(50% - 10px);
+    float: right;
+}
+
+button.login#button3 { /*dritter Button*/
+    margin-bottom: 0px;
+}
+
+@media (max-width: 600px) {
+    button.login#button1 { /*erster Button*/
+        margin-right: 5px;
+        width: calc(50% - 5px);
+    }
+
+    button.login#button2 { /*zweiter Button*/
+        margin-left: 5px;
+        width: calc(50% - 5px);
+    }
+}
+
+/*Footer*/
+ul.footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2D3237; /*Hintergrund der Navbar*/
+}
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -60px; 
+}
+
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+
+ul.footer, .page-wrap:after {
+    height: 60px;
+}
+
+li.footer {
+    display: inline;
+    float: left;
+}
+
+a.footer {
+    display: block;
+    color: #F2F2F2;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 22px;
+}
+
+a.footer:hover{
+    background-color: rgb(37, 37, 37);
+}
+
+
+/* Cookie Banner */
+div.cookie-banner, div.cookie-banner * {
+    box-sizing: border-box;
+}
+
+div.cookie-banner {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 60px;
+    background: #303030;
+    color: #fff;
+}
+
+button.cookie-banner {
+    float: right;
+    margin: 15px 0px 15px 0px;
+    padding: 2px 15px 2px 15px;
+    border: 0px;
+    border-radius: 0px;
+    height: 30px;
+    background-color: #33546F;
+    color: #F2F2F2;    
+    font-family: Calibri, "Segoe UI", Optima, Arial, sans-serif;    
+    font-size: 1em;
+}
+
+button.cookie-banner:hover{    
+    background-color: rgb(34, 37, 43); 
+}
+
+@media (max-width: 700px) {
+    div.cookie-banner {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        line-height: inherit;
+        height: auto;
+    }
+
+    button.cookie-banner {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+ /* normal pages */
+div.page {
+    background-color: #2D3237;
+    min-width: 450px;
+    width: calc(100% - 160px);
+    padding: 40px;    
+    margin-top: 40px;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+@media (max-width: 600px) {
+    div.page {
+        width: calc(100% - 80px);
+        padding: 20px; 
+        margin-top: 20px;
+    }
+}
+
+
+/* cart */
+button.ui {
+    margin: 0px 0px 30px 0px;
+    padding: 0px;   
+    min-height: 1cm;
+    height: 1cm;  
+    font-size: 1.4em;
+    margin-top: 5px;
+}
+
+button.ui#prim { 
+    margin-left: auto;
+    margin-bottom: 0px;
+    min-width: 285px;    
+    background-color: #48779E; 
+    float: right;    
+    width: calc((100%-180px)/4);
+}
+
+button.ui#secon {    
+    margin-bottom: 0px;
+    min-width: 285px;
+    width: calc((100%-180px)/4);
+}
+
+@media (max-width: 750px) {
+    button.ui#prim { 
+        margin-left: 10px;
+        margin-bottom: 0px;
+        width: calc(50% - 10px);    
+        background-color: #48779E; 
+        float: right;
+        min-width: unset;
+    }
+    
+    button.ui#secon { 
+        margin-right: 10px;    
+        margin-bottom: 0px;
+        width: calc(50% - 10px);
+        min-width: unset;
+    }
+}
+
+table.cart {
+    margin-bottom: 160px;
+}
+
+@media (max-height: 600px){
+    table.cart{
+        margin-bottom: 40px;
+    }
+}
+
+table.cart td:nth-child(1){ /* erste Spalte */
+    text-align: left;
+}
+
+table.cart td:nth-child(2){ /* zweite Spalte */
+    text-align: center;
+}
+
+table.cart td:nth-child(3){ /* dritte Spalte */
+    text-align: right;
+}
+
+table.cart td:nth-child(4){ /* vierte Spalte */
+    text-align: right;
+}
+
+table.cart th:nth-child(1){ /* erste Spalte Head */
+    text-align: left;
+}
+
+
+/* checkout */
+div.checkout {
+    color:#e6e6e6;
+}
+
+div.checkout h2 {
+    color:#F2F2F2;        
+    font-size: 1.5em;
+    margin: 0px;
+}
+
+div.checkout div.block {
+    width: 33%;
+    margin: auto;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+}
+
+div.hinweis {
+    width: 100%;
+    display: flex; 
+    justify-content: flex-end;    
+    margin-top: 160px;
+}
+
+div.hinweis div{
+    font-size: small;
+    margin-left: auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    min-width: 285px;
+    width: calc((100%-180px)/4);
+}
+
+@media (max-width: 750px) {
+    div.hinweis div{ 
+        margin-left: 10px;
+        width: calc(50% - 10px);
+        min-width: unset;
+    }
+}
+
+div.block>div {
+    margin-left: 20px;
+}
+
+table.checkout{
+    max-width: 300px;
+    min-width: 160px;
+    width: 70%;
+}
+
+table.checkout tbody{
+    border-bottom: 2px solid #e6e6e6;
+}
+
+table.checkout td:nth-child(2){
+    text-align: right;
+}
+
+@media (max-height: 600px){
+    div.hinweis{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1000px) { /* Zahlungsmethode und rechungsadresse nebeneinander, Bestellübersicht darunter */
+    div.checkout div.block:nth-child(-n+2) {
+        width: 49%;
+    }  
+    
+    div.checkout div.block:last-child {
+        width: 100%;
+    }
+
+    @media (max-height: 630px){
+        div.hinweis{
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 750px) { /* Alle Bloecke untereinander */
+    div.checkout div.block:nth-child(n) { /* Nur um Spezifitaet zu erhöhen */
+        width: 100%;
+    }
+
+    @media (max-height: 700px){
+        div.hinweis{
+            margin-top: 40px;
+        }
+    }
+}
+
+
+/* buyticket */
+div.buyticket h1{
+    display: inline;
+    color: #F2F2F2;
+}
+
+div.buyticket strong{
+    color: #F2F2F2;
+}
+
+div.buyticket div:nth-child(1){
+    margin-bottom: 20px;
+}
+
+div.buyticket div:nth-child(2){
+    margin-bottom: 160px;
+    line-height: 1.5;
+}
+
+@media (max-height: 700px){
+    div.buyticket div:nth-child(2){
+        margin-top: 40px;
+    }
+}
+
+div.buyticket div:nth-child(3){
+    height: auto;
+}
+
+div.buyticket button.ui{
+    height: 2cm;
+}
+
+
+/* flights */
+
+div.scroll{
+    overflow-x: auto;
+}
+
+.filter {
+    display: inline-block;
+    width: 13.9%;
+}
+
+details {
+    margin-top: 40px;
+}
+
+select {
+    margin-bottom: 20px;
+}
+
+div.filter_inputs {    
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+/* flights admin */
+
+button.edit_button {
+    width: 24.6%;
+    margin-bottom: 0px;
+}
+
+@media (max-width: 1000px){
+    button.edit_button {
+        width: 49.7%;
+    }
+}
+
+@media (max-width: 800px){
+    button.edit_button {
+        width: 100%;
+    }
+}
+
+div.page button.drei{
+    width: 33%;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+
+/* Fehlermeldung */
+div.errorbgblur{
+    background-color: black;
+}
+
+div.errorbox{
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+
+/*Rest*/
+
+
+
+div.hauptteil {
+    background: brown;
+    background-image: url("flat_ok_05012015.jpg");
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16pt;
+    color: black;
+}
+div.werbung {
+    background-color: aquamarine;
+    margin: 40px;
+}
+div.kontakt {
+
+}
+
+textarea {
+    resize:none;
+}
+
+
+
+
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+
+}
+
+
+/* Test */
+
+.middle-div {
+    height: 120px;
+    float: right;
+    width: 230px;
+    background-color: green;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 110px;
+}
+    
+.arrow-right {
+    height: 0px;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid green;
+    float: right;
+}
